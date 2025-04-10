@@ -42,4 +42,23 @@ Non-primitive type: Object (includes arrays, functions, etc
 What does typeof operator do?
 A: Returns the type of a variable as a string (e.g., "number", "object").
 
+What is the difference between == and ===?
+A: == checks value with type coercion; === checks value and type.
+
+What is NaN?
+A: It stands for "Not-a-Number". Example: parseInt('abc') returns NaN.
+
+What is hoisting?
+A: JavaScript moves variable and function declarations to the top of the scope during compile time.
+
+What is the difference between null and undefined?
+A: undefined means a variable has been declared but not assigned a value; null is intentionally set as "no value".
+
+ What is a callback function in JavaScript?
+A callback function is a function that is passed as an argument to another function and is executed later, either synchronously or asynchronously, depending on how and when it's called.
+
+What is a closure?
+A closure is a function that can access variables from its outer function even after the outer function has finished running.
+
+
 	

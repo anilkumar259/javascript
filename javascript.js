@@ -1,6 +1,12 @@
 What is JavaScript?
 A: A scripting language used to create and control dynamic content on websites.
-	
+
+What is the DOM?
+A: The Document Object Model – a tree-like structure of HTML elements that JavaScript can interact with.
+
+How can you select elements in the DOM?
+A: Using methods like getElementById(), querySelector(), getElementsByClassName() getElementsByTagName(), querySelectorAll() etc.
+
 How do you declare a variable in JavaScript?
 A: Using var, let, or const.
 	
@@ -15,7 +21,7 @@ Here are simple examples for var, let, and const — all in one place:
 			// let y = 20; ❌ SyntaxError: Identifier 'y' has already been declared
 			y = 25;      // ✅ reassigned
 			console.log(y); // 25
-  🔹 const – block-scoped, cannot be redeclared or reassigned
+  	🔹 const – block-scoped, cannot be redeclared or reassigned
 			const z = 10;
 			// z = 15;    ❌ TypeError: Assignment to constant variable
 			console.log(z); // 10
@@ -39,14 +45,37 @@ A: String, Number, Boolean, Undefined, Null, Object, Symbol, BigInt.
 Primitive types: String, Number, Boolean, Undefined, Null, Symbol, BigInt
 Non-primitive type: Object (includes arrays, functions, etc
 
+Array is not a data type 
+
+Array.isArray(arr); // true ✅
+This is the recommended way to check if something is an array.
+	
+typeof {};            // "object"
+typeof [];            // "object"
+typeof function(){};  // "function"
+typeof null;          // "object" 😅 (quirk of JS)
+
 What does typeof operator do?
 A: Returns the type of a variable as a string (e.g., "number", "object").
 
 What is the difference between == and ===?
 A: == checks value with type coercion; === checks value and type.
 
+'5' == 5     // true  ✅ because '5' is converted to number
+'5' === 5    // false ❌ because string !== number
+
+null == undefined   // true ✅
+null === undefined  // false ❌
+
+0 == false          // true ✅ (0 is falsy)
+0 === false         // false ❌ (number !== boolean)
+
+
 What is NaN?
 A: It stands for "Not-a-Number". Example: parseInt('abc') returns NaN.
+Anything → String	String(value) or `${value}`
+Anything → Number	parseInt(), parseFloat(), or Number()
+Anything → Boolean	Boolean(value)
 
 What is hoisting?
 A: JavaScript moves variable and function declarations to the top of the scope during compile time.
@@ -59,6 +88,17 @@ A callback function is a function that is passed as an argument to another funct
 
 What is a closure?
 A closure is a function that can access variables from its outer function even after the outer function has finished running.
+
+What is the difference between synchronous and asynchronous code?
+	Synchronous Code - Runs step-by-step, one line at a time. Each step must finish before the next begins.
+	Asynchronous Code The code doesn’t wait for the API to finish — it continues running the next lines, and handles the result later.
+	
+Array methods (map, forEach)	Synchronous	arr.map(x => x * 2)
+setTimeout, setInterval	Asynchronous	setTimeout(() => {...}, 1000)
+fetch, axios, I/O in Node.js	Asynchronous	fetch(...).then(callback)
+Event Listeners (click, etc.)	Asynchronous	button.addEventListener('click', cb)
+	
+
 
 
 	
